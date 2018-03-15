@@ -229,6 +229,7 @@ class AutoAttributeRenderer(JsRenderer):
         return dict(
             name=name,
             description=doclet.get('description', ''),
+            type='|'.join(doclet.get('type',{}).get('names',[])),
             content='\n'.join(self._content))
 
 
